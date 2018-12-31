@@ -1,0 +1,39 @@
+delimiter $$
+create procedure amount10(in id varchar(50),out sum float,out num int)
+begin
+declare done int default 0;
+declare price1 int default 0;
+declare var int default 0;
+declare name varchar(30);
+declare s int default 0;
+declare count int default 0;
+declare curs1 cursor for select orderquantity,productname from orders where orderid=id;
+declare continue handler for not found set done=1;
+open curs1;
+set sum=0;
+counter:loop
+fetch curs1 into var,name;
+if done=1 then
+leave counter;
+end if;
+select price into price1 from drugs where productname=name;
+set s=var*price1;
+set sum=sum+s;
+set count=count+1;
+set num=count;
+end loop counter;
+close curs1;
+end $$
+
+
+delimiter $$
+create trigger update_quan
+after insert on orders
+for each row
+begin
+if new.orderquantity is not null then
+update drugs
+set quantity=quantity-new.orderquantity
+where productname=new.productname;
+end if;
+end $$

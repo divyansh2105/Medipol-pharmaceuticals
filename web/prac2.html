@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="height:1500px">
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!--<div class="navbar-header">
+      <a class="navbar-brand" class="dropdown" href="#"><span class="glyphicon glyphicon-list fa-5x" style="font-size:1.6em;" style="color:#512da8"></span> </a>
+    </div>--!>
+       <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list fa-5x" style="font-size:1.6em;" style="color:#512da8"></span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li class="dropdown-submenu"><a class="dropdown-toggle" href="#">About Us<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	<li><a href="#who">Who Are We</a></li>
+	<li><a href="#what">What Do We Do</a></li>
+          <li><a href="#our">Our Stories</a></li>
+	</ul></li>
+          <li><a href="Achievement.html">Achievements</a></li>
+	<li><a href="newhtmlbmi.html">Check BMI</a></li>
+        </ul>
+      </li>
+<li class="active"><a href="#"><span class="glyphicon glyphicon-home fa-5x" style="font-size:2em;" style="color:#512da8"></span></a></li>
+      <li><a href="Client_new.php">Clients</a></li>
+      <li><a href="Career_new.html">Careers</a></li>
+	<li><a href="Subscribe_new.php">Subscribe</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+	<li><a href="contact.html">Contact Us</a></li>
+      <li><a href="signup.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  
+</div>
+
+<script>
+ $(document).ready(function(){
+  $(window).scroll(function() { 
+    if ($(document).scrollTop() > 550) { 
+      $('.navbar').addClass('shrink'); 
+    } else { 
+      $('.navbar').removeClass('shrink'); 
+    } 
+  }); 
+ });
+</script>
+
+<style>
+body{
+background-color: #F6F6EA;
+}
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+.navbar.shrink{ 
+   background: #0F9A19
+}
+
+.navbar {
+   background-color: blue;
+   
+   border-color: transparent;
+}
+
+
+.navbar-default {
+    background-color: grey;
+
+opacity:0.7;
+    border-color: grey;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: purple;opacity:0.5;
+    color: white;
+}
+
+</style>
+
+
+
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1370px;
+max-height: 800px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 38px;
+  width: 100%;
+  text-align: center;
+font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="wallhaven-3178.jpg" style="width:100%">
+  <div class="text">MEDIPOL<br><br>Life is our life's work</div>
+</div>
+<div class="mySlides fade">
+  <img src="wallhaven-10742.jpg" style="width:100%">
+  <div class="text">Medipol's reputation for integrity & passion in its approach<br> towards meeting the needs of patients dates<br> back over 30 years.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="wallhaven-12018.jpg" style="width:100%">
+  <div class="text">We at Medipol are committed to make the world<br> a healthier place through excellent<br> pharmaceutical products.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="wallhaven-16270.jpg" style="width:100%">
+  <div class="text">Quality, the foundation stone of Medipol, is now a <br>habit and pride of our workforce.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="wallhaven-27263.jpg" style="width:100%">
+  <div class="text">Whilst the healthcare industry has undergone many transformations since,<br> this patient-centric approach continues to guide us</div>
+</div>
+
+
+</div>
+<br>
+<br>
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
+</script>
+
+<style>
+.p1{
+ color: purple;
+  font-size: 40px;
+   background-color:white;
+max-width:750px;
+    text-align: center;
+margin: auto;
+    border-top-right-radius: 15px;
+box-shadow: 5px 5px 10px #888888;
+    border: 0px solid green;
+    padding: 10px;
+font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+.p2{
+ color: purple;
+  font-size: 40px;
+   background-color:white;
+box-shadow: 5px 5px 10px #888888;
+    text-align: center;
+margin: auto;
+   max-height:400px;
+    
+border: 0px solid black;
+    padding: 10px;
+font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}.p3{
+ color: purple;
+  font-size: 40px;
+   background-color:white;
+box-shadow: 5px 5px 10px #888888;
+    text-align: center;
+margin: auto;
+   max-height:400px;
+    margin-left:-50px;
+border: 0px solid black;
+    padding: 10px;
+font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+.cu1 {
+  margin: auto;
+   background-color:white;
+max-width:750px;
+    border: 0px solid green;
+    padding: 10px;
+   max-height: 500px;
+
+box-shadow: 5px 5px 10px #888888;
+}
+.cu2 {
+
+box-shadow: 5px 5px 10px #888888; 
+ margin: auto;
+   background-color:white;
+max-width:750px;
+    border: 0px solid green;
+    padding: 10px;
+   max-height: 400px;
+}
+.cu3 {
+
+box-shadow: 5px 5px 10px #888888; 
+ margin: auto;
+   background-color:white;
+max-width:750px;
+    border: 0px solid green;
+    padding: 10px;
+   max-height: 780px;
+}
+.cont {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  
+  max-width: 750px; /* change the limit here */
+color: black;
+  font-size: 20px;
+   
+font-family: 'Vollkorn', Georgia, Times, serif;
+}.cont1 {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 750px; /* change the limit here */
+color: black;
+  font-size: 20px;
+   
+font-family: 'Vollkorn', Georgia, Times, serif;
+}
+
+
+
+
+
+
+
+
+
+.e{background-color:#0F9A19;
+	float:center;
+	color: white;
+font-size: 18px;
+margin-left:-50px;
+width:1400px;
+margin-top:0px;
+}
+
+
+.fa {
+  padding: 5px;
+  font-size: 23px;
+  width: 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 70%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.inline { 
+    display: inline-block; 
+     
+    margin:10px;
+    }
+div.gallery1 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 140px;
+margin-top:-100px;
+margin-left:30px;
+}
+
+div.gallery1:hover {
+    border: 2px solid #777;
+	padding-right: 30px;
+}
+
+div.gallery1 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc1 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery1-2 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 140px;
+margin-top:-100px;
+margin-left:30px;
+}
+
+div.gallery1-2 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc1-2 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery2 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-275px;
+margin-left:350px;
+}
+
+div.gallery2:hover {
+    border: 2px solid #777;
+padding-right: 30px;
+
+}
+
+div.gallery2 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc2 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery2-2 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-275px;
+margin-left:350px;
+}
+
+div.gallery2-2 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc2-2 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery3 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-290px;
+margin-left:700px;
+}
+
+div.gallery3:hover {
+    border: 2px solid #777;
+padding-right: 30px;
+}
+
+div.gallery3 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc3 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery3-2 {
+    
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-290px;
+margin-left:700px;
+}
+
+div.gallery3-2 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc3-2 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery4 
+{
+   
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-320px;
+margin-left:950px;
+}
+
+div.gallery4:hover {
+    border: 2px solid #777;
+padding-right: 30px;
+}
+
+div.gallery4 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc4 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+div.gallery4-2 
+{
+   
+    border: 0px solid #ccc;
+    float: left;
+    width: 120px;
+margin-top:-300px;
+margin-left:950px;
+}
+
+div.gallery4-2 img {
+    width: 130%;
+    height: auto;
+}
+
+div.desc4-2 {
+    padding: 15px;
+    text-align: center;
+	font-size:15px;
+color:green;
+}
+
+
+</style>
+
+
+ 
+
+<br><br><br><br><br><br><div id="who" class="p1">Who Are We</div>
+<div class="cu1">
+<div class="cont">
+<br>Medipol Pharmaceutical India Pvt. Ltd. is the most rapidly growing pharmaceutical company based at Baddi, Himachal Pradesh, India offering a wide range of ethical and generic formulations to lead a healthy life with dignity.We at Medipol are committed to make the world a healthier place through the development, production, and marketing of excellent pharmaceutical products. We strive to achieve this objective by developing innovative products, which suit the needs of the patients globally and are superior in terms of quality, packaging, and stability. With focus on manufacturing and marketing a wide range of pharmaceutical formulations the foundation of Medipol was laid in 1992. We have speedily evolved since then and now also engage in distribution pan India. Medipol has also unrolled its wings in global market by commencing export. Quality the foundation stone of Medipol is now a habit and pride of our workforce. To maintain and make quality our work culture we are equipped with latest sophisticated systems and machinery. This ISO 9001: 2015 and WHO GMP certified plant is compliant with GLP normsalso.<br><br>
+</div></div>
+<br><br>
+<div class="p2">
+<br><br><div class="inline">
+<div class="gallery1">
+<img src="box1.png" width="300" height="200">
+<div class="desc1">Cutting edge innovations in Oncology</div></div>
+<div class="inline">
+<div class="gallery2">
+<img src="box2.png" width="300" height="200">
+<div class="desc2">Central Nervous System(CNS) and (GI)</div></div>
+<div class="inline">
+<div class="gallery3">
+<img src="box3.png" width="300" height="200">
+<div class="desc3">Vaccines on Dengue and Norovirus</div></div>
+<div class="inline">
+<div class="gallery4">
+<img src="box4.png" width="300" height="200">
+<div class="desc4">Contributing to free drug distribution by WHO</div></div>
+</div></div>
+<br><br>
+<div id="what" class="p1">What Do We Do</div>
+<div class="cu2">
+<div class="cont1">
+<br><br><br><br><br><br><br><br><br><br><br><br>We aspire to be a dynamic R&D organization by focusing on the best science for those therapies that can deliver true innovation for patients. We will build deep disease area expertise in our core therapeutic areas, strengthen our pipeline and create an inspiring culture. 
+Focus on Our Therapeutic Areas
+We will focus on therapeutic areas where we want to be at the cutting edge of innovation: oncology, gastroenterology (GI) and central nervous system (CNS) disease areas where patient need is great, where we can build upon our deep scientific expertise, where we have a strong track record of recent successes, and where we intend to continue discovering innovative new medicines. We also will continue to build upon our global health approach to Vaccines, founded on our dengue and norovirus programs.
+</div></div><br>
+
+<div class="p3">
+<div align="center"><font size="6" font color="green">Our Expert Panel</font></div>
+<br><br><div class="inline">
+<div class="gallery1-2">
+<img src="d1.jpg" width="300" height="200">
+<div class="desc1-2">Dr. Stephen Smith</div></div>
+<div class="inline">
+<div class="gallery2-2">
+<img src="d2.jpg" width="300" height="200">
+<div class="desc2-2">Dr. Adolf Stalin</div></div>
+<div class="inline">
+<div class="gallery3-2">
+<img src="d3.jpg" width="300" height="200">
+<div class="desc3-2">Dr. Will Hannibal</div></div>
+<div class="inline">
+<div class="gallery4-2">
+<img src="d4.jpg" width="300" height="200">
+<div class="desc4-2">Dr. Mark Hunt</div></div>
+</div></div>
+</div>
+<div id="our" class="p1">Our Stories</div>
+<div class="cu3">
+<div class="cont1">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Medipol's reputation for integrity & passion in its approach towards meeting the needs of patients dates back over 30 years.Whilst the healthcare industry has undergone many transformations since, this patient-centric approach continues to guide us, and is put into practice on a daily basis by our global team of over 30,000 dedicated staff. When prescribed medication by your doctor, it's only right that you pay more attention to how many tablets to take and when to take them, than to what they actually contain. Modern day drugs are often the result of decades of rigorous research, countless failures in the lab, and perhaps a surprising breakthrough - and all of this before they are submitted for the laborious testing required to gain regulatory approval. But take a closer look at the label and amongst the ingredients you will likely find one or more of a number of essential elements - Active Pharmaceutical Ingredients (APIs) - and it's these that give what may just be a small white tablet the ability to transform your life. The development of new APIs is never a routine process. With the potential for success sometimes not only years but decades away in the future, it requires our scientists to maintain both extraordinary passion and a deep sense of commitment to the mission. With multiple setbacks to be expected along the way, tenacity is a must, as is the flexibility to recognize new possibilities that may arise from seeming failure. Naturally, as a company we are united behind our researchers in this mission to find new cures, and go to great lengths to support them in the discovery and development of new APIs. Our cutting-edge technologies and global facilities constantly evolve to take advantage of new breakthroughs. The sharing of expertise by employees who have decades of experience with younger colleagues is an essential part of our work culture, playing an important role in both fostering strong community relations, and also in ensuring we maintain the quality of our products.
+</div></div><br><br><br><br><br><br><br>
+<div class="e">
+&nbsp&nbsp<a href="terms_new.html"><font color="white">Terms Of Use</font></a>&nbsp|&nbsp;<a href="privacy_new.html"><font color="white">Privacy Policy</font></a>
+<div style="margin: 0 auto; width: 200px;">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a></div>
+<br><font size="3">Copyright 1995-2017 Medipol Pharmaceutical Company Limited. All rights reserved.</font>
+</div>
+
+
+
+
+</body>
+</html>
